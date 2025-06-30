@@ -13,3 +13,17 @@ tailwind.config = {
     },
   },
 };
+
+const menuBtn = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
+const links = mobileMenu.querySelectorAll("a");
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+  });
+});
