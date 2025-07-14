@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Register ScrollTrigger plugin
   gsap.registerPlugin(ScrollTrigger);
 
-  // Animate hero section elements
   gsap.from("nav", {
     duration: 1,
     y: -50,
