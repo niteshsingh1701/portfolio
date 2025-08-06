@@ -30,6 +30,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
 
     <link
       rel="stylesheet"
@@ -40,6 +45,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      dotlottie-player {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 300px;
+      }
+    </style>
   </head>
   <body class="gradient-bg">
     <!-- Navigation -->
@@ -123,33 +135,46 @@
         <div class="md:w-1/2 flex justify-center">
           <div class="relative">
             <div
-              class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20"
+              class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center"
+            >
+              <dotlottie-player
+                src="https://assets2.lottiefiles.com/packages/lf20_w51pcehl.json"
+                background="transparent"
+                speed="1"
+                class="w-full h-full"
+                loop
+                autoplay
+              ></dotlottie-player>
+            </div>
+            <div
+              class="absolute -top-6 -right-6 w-24 h-24 rounded-lg bg-gradient-to-r from-primary to-secondary p-4 floating backdrop-blur-sm"
+              style="animation: float 6s ease-in-out infinite"
             >
               <div
-                class="w-full h-full bg-gradient-to-br from-primary/30 to-secondary/30 flex items-center justify-center"
+                class="bg-dark/80 backdrop-blur-sm w-full h-full rounded flex flex-col items-center justify-center transform hover:scale-105 transition-transform"
               >
-                <div class="text-8xl text-white">👨‍💻</div>
+                <span
+                  class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text"
+                  >2+</span
+                >
+                <span class="text-xs text-slate-300">Years</span>
               </div>
             </div>
             <div
-              class="absolute -top-6 -right-6 w-24 h-24 rounded-lg bg-gradient-to-r from-primary to-secondary p-4 floating"
+              class="absolute -bottom-6 -left-6 w-24 h-24 rounded-lg bg-gradient-to-r from-primary to-secondary p-4 floating backdrop-blur-sm"
+              style="
+                animation: float 6s ease-in-out infinite;
+                animation-delay: 1s;
+              "
             >
               <div
-                class="bg-dark w-full h-full rounded flex items-center justify-center"
+                class="bg-dark/80 backdrop-blur-sm w-full h-full rounded flex flex-col items-center justify-center transform hover:scale-105 transition-transform"
               >
-                <span class="text-2xl font-bold">2+</span>
-                <span class="text-xs ml-1">Years</span>
-              </div>
-            </div>
-            <div
-              class="absolute -bottom-6 -left-6 w-24 h-24 rounded-lg bg-gradient-to-r from-primary to-secondary p-4 floating"
-              style="animation-delay: 1s"
-            >
-              <div
-                class="bg-dark w-full h-full rounded flex items-center justify-center"
-              >
-                <span class="text-2xl font-bold">20+</span>
-                <span class="text-xs ml-1">Projects</span>
+                <span
+                  class="text-2xl font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text"
+                  >20+</span
+                >
+                <span class="text-xs text-slate-300">Projects</span>
               </div>
             </div>
           </div>
@@ -234,55 +259,79 @@
             <h3 class="text-xl font-semibold mb-6">Frontend Development</h3>
             <div class="flex flex-wrap gap-4">
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-html5 group-hover:animate-bounce"></i
                 >HTML</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-css3-alt group-hover:animate-bounce"></i
                 >CSS</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-js group-hover:animate-bounce"></i
                 >JavaScript</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
-                >React JS</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-react group-hover:animate-spin"></i>React
+                JS</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
-                >React Hooks</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fas fa-code group-hover:animate-pulse"></i>React
+                Hooks</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
-                >API Handling</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fas fa-plug group-hover:animate-bounce"></i>API
+                Handling</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
-                >jQuery</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-js group-hover:animate-bounce"></i>jQuery</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
-                >Tailwind CSS</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-css3 group-hover:animate-bounce"></i>Tailwind
+                CSS</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-bootstrap group-hover:animate-bounce"></i
                 >Bootstrap</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
-                >SASS & LESS</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-sass group-hover:animate-bounce"></i>SASS &
+                LESS</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
-                >GSAP</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fas fa-wind group-hover:animate-pulse"></i>GSAP</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fas fa-mobile-alt group-hover:animate-bounce"></i
                 >Responsive Design</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-primary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fas fa-tablet-alt group-hover:animate-bounce"></i
                 >Mobile-First Design</span
               >
             </div>
@@ -292,44 +341,62 @@
             <h3 class="text-xl font-semibold mb-6">Tools & Technologies</h3>
             <div class="flex flex-wrap gap-4">
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
-                >Git</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-git-alt group-hover:animate-spin"></i>Git</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-github group-hover:animate-bounce"></i
                 >GitHub</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-wordpress group-hover:animate-spin"></i
                 >WordPress</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fas fa-universal-access group-hover:animate-pulse"></i
                 >W3C WCAG Compliant</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fas fa-database group-hover:animate-bounce"></i
                 >MySQL</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-slack group-hover:animate-bounce"></i
                 >Slack</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-trello group-hover:animate-bounce"></i
                 >Trello</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
-                >Jira</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-jira group-hover:animate-bounce"></i>Jira</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
-                >VS Code</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fas fa-code group-hover:animate-pulse"></i>VS
+                Code</span
               >
               <span
-                class="px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition"
-                >Chrome DevTools</span
+                class="skill-tag px-4 py-2 bg-slate-600 text-white rounded-md hover:bg-secondary transition-all duration-300 flex items-center gap-2 transform hover:scale-110 hover:shadow-lg group"
+              >
+                <i class="fab fa-chrome group-hover:animate-bounce"></i>Chrome
+                DevTools</span
               >
             </div>
           </div>
