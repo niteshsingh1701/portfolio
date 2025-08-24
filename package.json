@@ -1,0 +1,18 @@
+{
+  "name": "sample-portfolio",
+  "version": "1.0.0",
+  "description": "A fully responsive and animated personal portfolio website built using HTML, Tailwind CSS, custom CSS, and GSAP. This site highlights my work as a Frontend Developer, showcasing live projects, technical skills, resume access, and smooth scroll-based animations to enhance user experience.",
+  "main": "gsap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^4.1.12"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12"
+  }
+}

@@ -27,3 +27,5 @@ links.forEach((link) => {
     mobileMenu.classList.add("hidden");
   });
 });
+
+document.getElementById('year').textContent = new Date().getFullYear();

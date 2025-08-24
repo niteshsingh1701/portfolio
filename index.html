@@ -53,7 +53,7 @@
       }
     </style>
   </head>
-  <body class="gradient-bg">
+  <body class="gradient-bg w-full">
     <!-- Navigation -->
     <nav class="fixed w-full z-50 py-4 px-6 bg-dark/80 backdrop-blur-sm">
       <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -96,7 +96,7 @@
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center hero-pattern">
       <div
-        class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center"
+        class="max-w-7xl mx-auto pt-25 px-6 py-20 flex flex-col md:flex-row items-center"
       >
         <div class="md:w-1/2 mb-12 md:mb-0">
           <h1 class="text-4xl md:text-6xl font-bold mb-4">
@@ -1028,11 +1028,12 @@
     <!-- Footer -->
     <footer class="py-10 border-t border-slate-800">
       <div class="max-w-7xl mx-auto px-6 text-center">
-        <p class="text-slate-400">© 2025 Nitesh Singh. All rights reserved.</p>
+        <p class="text-slate-400">© <span id="year"></span> Nitesh Singh. All rights reserved.</p>
         <p class="text-slate-500 mt-2">Designed and built with ❤️</p>
       </div>
     </footer>
     <script src="script.js"></script>
     <script src="gsap.js"></script>
+    <script src="mobile-fix.js"></script>
   </body>
 </html>
