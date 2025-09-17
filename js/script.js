@@ -28,4 +28,25 @@ links.forEach((link) => {
   });
 });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// show more/show less functionality
+
+const cards = document.querySelectorAll(".project-card");
+const btn = document.getElementById("showMoreBtn");
+
+cards.forEach((card, index) => {
+  if (index >= 3) card.classList.add("hidden");
+});
+
+let expanded = false;
+
+btn.addEventListener("click", () => {
+  expanded = !expanded;
+  cards.forEach((card, index) => {
+    if (index >= 3) {
+      expanded ? card.classList.remove("hidden") : card.classList.add("hidden");
+    }
+  });
+  btn.textContent = expanded ? "Show Less" : "Show More";
+});
