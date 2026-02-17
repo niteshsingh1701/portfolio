@@ -8,15 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.width = '100%';
         section.style.maxWidth = '100%';
       });
-      
-      // Ensure max-w-7xl containers have correct width
-    //   document.querySelectorAll('.max-w-7xl').forEach(container => {
-    //     container.style.width = '100%';
-    //     container.style.maxWidth = '100%';
-    //     container.style.paddingLeft = '15px';
-    //     container.style.paddingRight = '15px';
-    //     container.style.boxSizing = 'border-box';
-    //   });
     }
   }
   
